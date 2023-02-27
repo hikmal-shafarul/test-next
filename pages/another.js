@@ -27,7 +27,12 @@ function another({ response }) {
 
         <div className={styles.item}>
           {response.map((item) => {
-            return <p key={item.id} onClick={() => {deleteHandler(item.name)}}>{item.name}</p>;
+            return(
+              <>
+              <p style={{marginTop:'1rem'}} key={item.id} onClick={() => {deleteHandler(item.name)}}>{item.name}</p>
+              <Link href={`/${item.id}`} style={{padding:'3px' , backgroundColor:'crimson' , color:'white'}}>Get{item.id}</Link>
+              </>
+            )
           })}
         </div>
         <button

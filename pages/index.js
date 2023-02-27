@@ -3,8 +3,15 @@ import Image from 'next/image'
 import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
+import { Lobster } from '@next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+const lobster = Lobster({
+  weight: ['400'],
+  style: ['normal'],
+  subsets: ['latin'],
+})
+
 
 export default function Home() {
   return (
@@ -15,7 +22,8 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className={styles.main}>
+      <div className={styles.main} style={{fontSize:'1.3em'}}>
+        <p className={lobster.className}>JamaludinBar</p>
        <p>It is Home cok!</p>
        <Link href='/another'>Another pagezz</Link>
        <p>ditambahkan</p>
